@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.5);
+    filter: alpha(opacity=50);
+}
+
+button {
+    margin: 10px;
+}
+
+.sticker {
+    font-family: Gloria-Hallelujah;
+    text-align: center;
+    background-color: #fde456;
+    min-height:150px;
+    min-width: 150px;
+    position: absolute;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+}
+
+.stick-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sticker:hover {
+    cursor: move;
+}
+
+
+
+footer {
+    background: rgba(255, 255, 255, 0.5);
+    filter: alpha(opacity=50);
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
