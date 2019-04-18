@@ -15,18 +15,24 @@ button {
 }
 
 .sticker {
-    font-family: Gloria-Hallelujah;
+    font-family: 'Caveat';
     text-align: center;
     background-color: #fde456;
-    min-height:150px;
-    min-width: 150px;
+    min-height:200px;
+    min-width: 200px;
     position: absolute;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-.stick-header {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.sticker .stick-header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.stick-content {
+    text-align: left;
+    font-size: 1.5em;
 }
 
 .sticker:hover {
