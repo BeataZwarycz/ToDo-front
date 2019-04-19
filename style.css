@@ -1,3 +1,11 @@
+/*@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";*/
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+:root{
+    --text_color:  rgb(16, 19, 86);
+    --font:'Rock Salt', cursive, sans-serif;
+}
+
 body {
     margin: 0;
     background-image: url("img/background.jpg");
@@ -43,3 +51,64 @@ footer {
     text-align: center;
     width: 100%
 }
+
+#register, #login {
+    display: inline-block;
+    height: 280px;
+    width: 280px;
+    margin: 10px;
+    font-family: var(--font);
+    color: var(--text_color);
+    text-align: center;
+    background-color: #fde456;
+    /*position: absolute;*/
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+}
+
+#register {
+
+    /*top: 40%;*/
+    /*left:55%;*/
+    /*min-height:200px;
+    min-width: 200px;*/
+}
+
+#login {
+    /*top: 40%;*/
+    /*left:25%;*/
+    /*min-height:200px;
+    min-width: 200px;*/
+}
+
+.sticker h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.textbox {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    background: rgba(255, 255, 255, 0.5);
+    filter: alpha(opacity=50);
+    color: var(--text_color);
+    font-size: 18px;
+    width: 80%;
+}
+
+.textbox i{
+    width: 20px;
+    float: left;
+    text-align: center;
+}
+
