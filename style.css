@@ -10,7 +10,12 @@ nav {
     filter: alpha(opacity=50);
 }
 
-button {
+.navbar-brand {
+    color: grey;
+}
+
+.btn-outline-secondary {
+    position: right;
     margin: 10px;
 }
 
@@ -20,32 +25,48 @@ button {
     background-color: #fde456;
     min-height:200px;
     min-width: 200px;
+    max-width: 200px;
     position: absolute;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-.sticker .stick-header {
+.sticker .sticker-header {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 1.5em;
+    text-align: center;
+    padding: 0;
+    color: black;
 }
 
-.stick-content {
-    text-align: left;
+.sticker-content {
     font-size: 1.5em;
+    overflow: hidden;
 }
 
-.sticker:hover {
-    cursor: move;
+.task {
+    font-size: 2em;
 }
 
+.task:hover {
+    text-decoration: line-through;
+}
 
+.close {
+    margin-right: 15px;
+}
+
+ul {
+    list-style-type: square;
+}
 
 footer {
-    background: rgba(255, 255, 255, 0.5);
-    filter: alpha(opacity=50);
     bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
     position: absolute;
     text-align: center;
-    width: 100%
+    bottom: 0;
+    width:100%;
 }
+
+@media (max)

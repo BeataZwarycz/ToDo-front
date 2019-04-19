@@ -8,11 +8,10 @@
     var grabPointY;
     var grabPointX;
 
-
     onDragStart = function (ev) {
         var boundingClientRect;
 
-        if (ev.target.className.indexOf('stick-header') === -1) {
+        if (ev.target.className.indexOf('sticker') === -1) {
             return;
         }
 
@@ -31,7 +30,7 @@
         }
 
         var posX = ev.clientX + grabPointX;
-        var posY = ev.clientY
+        var posY = ev.clientY + grabPointY;
 
         if (posX < 0) {
             posX = 0;
@@ -49,8 +48,9 @@
         draggedEl = null;
         grabPointX = null;
         grabPointY = null;
-    }
+    } 
 
+    
     document.addEventListener('mousemove', onDrag, false);
     document.addEventListener('mouseup', onDragEnd, false);
     document.querySelector('.sticker').addEventListener('mousedown', onDragStart, false);
