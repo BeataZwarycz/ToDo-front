@@ -28,6 +28,7 @@ nav {
     margin: auto;
     margin-bottom: 15px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    position: relative;
 }
 
 .sticker .sticker-header {
@@ -48,15 +49,23 @@ nav {
     font-size: 1.5em;
     text-align: center;
     overflow: hidden;
-    padding:
+    padding: 10px;
 }
 
 .task:hover {
     text-decoration: line-through;
 }
 
-.close {
-    margin-right: 15px;
+.delete-sticker {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.edit-sticker {
+    position: absolute;
+    bottom: 0;
+    right:0;
 }
 
 ul {
