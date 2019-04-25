@@ -1,9 +1,10 @@
 /*@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";*/
-@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+/*@import url('https://fonts.googleapis.com/css?family=Rock+Salt');*/
+@import url('https://fonts.googleapis.com/css?family=Caveat');
 
 :root{
     --text_color:  rgb(16, 19, 86);
-    --font:'Rock Salt', cursive, sans-serif;
+    --font:'Caveat';
 }
 
 body {
@@ -16,6 +17,10 @@ body {
 nav {
     background: rgba(255, 255, 255, 0.5);
     filter: alpha(opacity=50);
+}
+
+.navbar-brand {
+    color: grey;
 }
 
 button {
@@ -47,40 +52,24 @@ footer {
     background: rgba(255, 255, 255, 0.5);
     filter: alpha(opacity=50);
     bottom: 0;
-    position: absolute;
     text-align: center;
     width: 100%
 }
 
+/*login*/
+
 #register, #login {
-    display: inline-block;
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
     margin: 10px;
     font-family: var(--font);
     color: var(--text_color);
     text-align: center;
     background-color: #fde456;
-    /*position: absolute;*/
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
 }
 
-#register {
-
-    /*top: 40%;*/
-    /*left:55%;*/
-    /*min-height:200px;
-    min-width: 200px;*/
-}
-
-#login {
-    /*top: 40%;*/
-    /*left:25%;*/
-    /*min-height:200px;
-    min-width: 200px;*/
-}
-
-.sticker h1 {
+#register h1, #login h1 {
     font-size: 40px;
     font-weight: bold;
     margin: 5px;
@@ -104,6 +93,11 @@ footer {
     color: var(--text_color);
     font-size: 18px;
     width: 80%;
+    border-radius: 5px;
+}
+
+.textbox:hover{
+    filter: brightness(0.5);
 }
 
 .textbox i{
