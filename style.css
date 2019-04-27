@@ -10,36 +10,77 @@ nav {
     filter: alpha(opacity=50);
 }
 
-button {
+.navbar-brand {
+    color: grey;
+}
+
+.btn-outline-secondary {
+    position: right;
     margin: 10px;
 }
 
 .sticker {
-    font-family: Gloria-Hallelujah;
+    font-family: 'Caveat';
     text-align: center;
     background-color: #fde456;
-    min-height:150px;
-    min-width: 150px;
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.sticker .sticker-header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0;
+    color: black;
+    overflow: hidden;
+}
+
+.sticker-content {
+    font-size: 1.5em;
+}
+
+.task {
+    font-size: 1.5em;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.task:hover {
+    text-decoration: line-through;
+}
+
+.delete-sticker {
     position: absolute;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+    top: 5px;
+    right: 5px;
 }
 
-.stick-header {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.edit-sticker {
+    position: absolute;
+    bottom: 0;
+    right:0;
 }
 
-.sticker:hover {
-    cursor: move;
+ul {
+    list-style-type: square;
 }
-
-
 
 footer {
     background: rgba(255, 255, 255, 0.5);
-    filter: alpha(opacity=50);
-    bottom: 0;
-    position: absolute;
     text-align: center;
-    width: 100%
+    margin-bottom: 0;
+    width:100%;
 }
+
+@media only screen and (max-width: 575px) {
+    .sticker { 
+        width: 250px;
+    }
+ }
