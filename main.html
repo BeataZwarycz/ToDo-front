@@ -1,104 +1,154 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pl">
-
-<head>
+  <head>
     <title>ToDo</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Aplikacja ToDo stworzona jako projekt zespołowy w ramach CodersCamp." />
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="description"
+      content="Aplikacja ToDo stworzona jako projekt zespołowy w ramach CodersCamp."
+    />
     <meta name="keywords" content="app todo coderscamp" />
-    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="auth-guard.js"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-
-        <nav class="navbar">
-            <a class="navbar-brand" href="index.html">To Do App</a>
-            <button class="btn btn-outline-secondary" href="index.html">Log out</button>
-        </nav>
-
+      <nav class="navbar">
+        <a class="navbar-brand" href="index.html">To Do App</a>
+        <button class="btn btn-outline-secondary" href="index.html">
+          Log out
+        </button>
+      </nav>
     </header>
 
     <main>
-	<div id="root"></div>
+      <div id="root"></div>
 
-        <button class="btn btn-outline-secondary">
-            Add Stick
-        </button>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="sticker">
-                        <button class="btn delete-sticker close"><i class="fa fa-times fa-fw"></i></button>
-                        <a class="sticker-header" href="tag1.html" target="_blank">Nazwa tagu</a>
-                        <div class="sticker-content">
-                        Opis tagu
-                        </div>
-                        <button class="btn edit-sticker"><i class="fa fa-pencil fa-fw"></i></button>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="sticker">
-                        <button class="btn delete-sticker close"><i class="fa fa-times fa-fw"></i></button>
-                        <a class="sticker-header" href="tag1.html" target="_blank">Codzienne</a>
-                        <div class="sticker-content">
-                            Zadania na każdy kolejny dzień
-                        </div>
-                        <button class="btn edit-sticker"><i class="fa fa-pencil fa-fw"></i></button>  
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="sticker">
-                        <button class="btn delete-sticker close"><i class="fa fa-times fa-fw"></i></button>
-                        <a class="sticker-header" href="tag1.html" target="_blank">Nauka</a>
-                        <div class="sticker-content">
-                            W poniedziałek (03.06) rozplanować nowe zadania na długi weekend
-                        </div>
-                        <button class="btn edit-sticker"><i class="fa fa-pencil fa-fw"></i></button>
-                    </div>
-
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="sticker">
-                        <button class="btn delete-sticker close"><i class="fa fa-times fa-fw"></i></button>
-                        <a class="sticker-header" href="tag1.html" target="_blank">Studia</a>
-                        <div class="sticker-content">
-                            Projekty, kolokwia, zadania domowe, samorząd.
-                        </div>
-                        <button class="btn edit-sticker"><i class="fa fa-pencil fa-fw"></i></button>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="sticker">
-                        <button class="btn delete-sticker close"><i class="fa fa-times fa-fw"></i></button>
-                        <a class="sticker-header" href="tag1.html" target="_blank">Praca</a>
-                        <div class="sticker-content">
-                        </div>
-                        <button class="btn edit-sticker"><i class="fa fa-pencil fa-fw"></i></button>
-                    </div>
-                </div>
+      <button class="btn btn-outline-secondary">
+        Add Stick
+      </button>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="sticker">
+              <button class="btn delete-sticker close">
+                <i class="fa fa-times fa-fw"></i>
+              </button>
+              <a class="sticker-header" href="tag1.html" target="_blank"
+                >Nazwa tagu</a
+              >
+              <div class="sticker-content">
+                Opis tagu
+              </div>
+              <button class="btn edit-sticker">
+                <i class="fa fa-pencil fa-fw"></i>
+              </button>
             </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="sticker">
+              <button class="btn delete-sticker close">
+                <i class="fa fa-times fa-fw"></i>
+              </button>
+              <a class="sticker-header" href="tag1.html" target="_blank"
+                >Codzienne</a
+              >
+              <div class="sticker-content">
+                Zadania na każdy kolejny dzień
+              </div>
+              <button class="btn edit-sticker">
+                <i class="fa fa-pencil fa-fw"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="sticker">
+              <button class="btn delete-sticker close">
+                <i class="fa fa-times fa-fw"></i>
+              </button>
+              <a class="sticker-header" href="tag1.html" target="_blank"
+                >Nauka</a
+              >
+              <div class="sticker-content">
+                W poniedziałek (03.06) rozplanować nowe zadania na długi weekend
+              </div>
+              <button class="btn edit-sticker">
+                <i class="fa fa-pencil fa-fw"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="sticker">
+              <button class="btn delete-sticker close">
+                <i class="fa fa-times fa-fw"></i>
+              </button>
+              <a class="sticker-header" href="tag1.html" target="_blank"
+                >Studia</a
+              >
+              <div class="sticker-content">
+                Projekty, kolokwia, zadania domowe, samorząd.
+              </div>
+              <button class="btn edit-sticker">
+                <i class="fa fa-pencil fa-fw"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-xl-3">
+            <div class="sticker">
+              <button class="btn delete-sticker close">
+                <i class="fa fa-times fa-fw"></i>
+              </button>
+              <a class="sticker-header" href="tag1.html" target="_blank"
+                >Praca</a
+              >
+              <div class="sticker-content"></div>
+              <button class="btn edit-sticker">
+                <i class="fa fa-pencil fa-fw"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <footer class="page-footer text-center">
-        CODERSCAMP PROJECT 2019
+      CODERSCAMP PROJECT 2019
     </footer>
-	<script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="line_through.js"></script>
-
-</body>
-
+  </body>
 </html>

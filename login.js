@@ -1,8 +1,8 @@
-var apiUrl = "https://to-do-coderscamp.herokuapp.com/";
+var apiUrl = "https://to-do-coderscamp.herokuapp.com/api/";
 
 function register() {
   const request = new XMLHttpRequest();
-  request.open("POST", "http://localhost:3000/api/users", true);
+  request.open("POST", apiUrl + "users", true);
   request.setRequestHeader("Content-Type", "application/json");
   request.onload = function() {
     var data = JSON.parse(this.response);
@@ -20,7 +20,7 @@ function register() {
 
 function login() {
   const request = new XMLHttpRequest();
-  request.open("POST", "http://localhost:3000/api/auth", true);
+  request.open("POST", apiUrl + "auth", true);
   request.setRequestHeader("Content-Type", "application/json");
   request.onload = function() {
     var data = this.response;
@@ -28,6 +28,7 @@ function login() {
       const token = data;
       console.log(token);
       localStorage.setItem("token", data);
+      window.location.assign("main.html");
       //save token to local storage
     } else {
     }
